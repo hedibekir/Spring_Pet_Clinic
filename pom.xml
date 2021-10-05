@@ -23,9 +23,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/hedibekir/Spring_Pet_Clinic.git</connection>
-        <developerConnection>scm:git:ssh://github.com/hedibekir/Spring_Pet_Clinic.git</developerConnection>
         <url>https://github.com/hedibekir/Spring_Pet_Clinic</url>
-        <tag>HEAD</tag>
     </scm>
     <build>
         <plugins>
