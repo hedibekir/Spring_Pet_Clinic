@@ -1,22 +1,26 @@
 package guru.springtraining.petclinic.model;
 
-public class Person {
-    private String firstname;
+import lombok.*;
+
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@MappedSuperclass
+public class Person extends BaseEntity {
+
+    @Column(name="first_name")
+    private String firstName;
+
+    @Column(name="last_name")
     private String lastName;
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
+    public Person(Long id, String firstName, String lastName) {
+        super(id);
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 }
